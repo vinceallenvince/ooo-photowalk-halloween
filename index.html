@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OOO-photowalk: halloween</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #000; }
+  figure { position: relative; margin: 0; }
+  img { display: block; width: 100%; height: auto; }
+  figcaption { position: absolute; left: 8px; bottom: 8px; padding: 3px 8px;
+               border-radius: 4px; background: rgba(0,0,0,.55); color: #fff;
+               font: 12px -apple-system, system-ui, sans-serif; }
+  figcaption:empty { display: none; }
+  .pub { position: absolute; right: 8px; top: 8px; padding: 3px 8px;
+         border-radius: 4px; background: rgba(0,0,0,.55); color: #fff;
+         font: 12px -apple-system, system-ui, sans-serif; text-decoration: none; }
+  #status { color: #999; font: 14px -apple-system, system-ui, sans-serif;
+            padding: 16px; margin: 0; }
+</style>
+</head>
+<body>
+<p id="status">Loading…</p>
+<main id="feed"></main>
+<script>
+  // Every render in transformed/halloween/, newest first. Each image has a
+  // Publish link that opens a prefilled issue; .github/workflows/publish.yml
+  // does the rest.
+  const REPO = "vinceallenvince/ooo-photowalk-halloween";
+  const THEME = "halloween";
+  const API = `https://api.github.com/repos/${REPO}/contents/transformed/${THEME}`;
+  const RAW = `https://raw.githubusercontent.com/${REPO}/main`;
+  const feed = document.getElementById("feed");
+  const status = document.getElementById("status");
+  const isImg = f => f.type === "file" && /\.(png|jpe?g|webp)$/i.test(f.name);
+
+  const list = url => fetch(url).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
+
+  // Published files, read from published.json (raw URL, may lag ~5 min).
+  const published = fetch(`${RAW}/published.json`)
+    .then(r => r.ok ? r.json() : []).then(items => new Set(items.map(i => i.file))).catch(() => new Set());
+
+  list(API)
+    .then(files => files.filter(isImg).map(f => ({ theme: THEME, f })))
+    .then(items => published.then(pub => [items, pub]))
+    .then(([items, pub]) => {
+      items.sort((a, b) => b.f.name.localeCompare(a.f.name)); // newest first
+      if (!items.length) { status.textContent = "No pigeons yet."; return; }
+      status.remove();
+      for (const { theme, f } of items) {
+        const fig = document.createElement("figure");
+        const img = document.createElement("img");
+        const cap = document.createElement("figcaption");
+        img.src = f.download_url;
+        img.alt = `${theme} ${f.name}`;
+        img.loading = "lazy";
+        img.addEventListener("load", () => caption(cap, theme, f.name), { once: true });
+        fig.append(img, cap, publishLink(theme, f.path, pub));
+        feed.appendChild(fig);
+      }
+    })
+    .catch(e => { status.textContent = "Couldn't load images (" + e.message + "). Try again in a minute."; });
+
+  function publishLink(theme, path, pub) {
+    const isPub = pub.has(`published/${theme}/${path.split("/").pop()}`);
+    const a = document.createElement("a");
+    a.className = "pub";
+    a.textContent = isPub ? "Published ✓ · Unpublish" : "Publish";
+    a.href = `https://github.com/${REPO}/issues/new?title=` +
+      encodeURIComponent(`${isPub ? "unpublish" : "publish"} ${path}`);
+    a.target = "_blank";
+    return a;
+  }
+
+  // Theme and slogan/caption from the classification JSON (raw URL, not the API).
+  // A "--flux" suffix marks the FLUX render of the same photo.
+  function caption(cap, theme, name) {
+    const base = name.replace(/\.[^.]+$/, "");
+    const stem = base.replace(/--\w+$/, "");
+    const label = base === stem ? theme : `${theme} · FLUX`;
+    fetch(`${RAW}/classifications/${stem}.json`)
+      .then(r => r.ok ? r.json() : {})
+      .then(c => {
+        const d = (c.directions || {})[theme] || {};
+        const phrase = d[d.phrase || "slogan"];
+        cap.textContent = phrase ? `${label} · “${phrase}”` : label;
+      })
+      .catch(() => { cap.textContent = label; });
+  }
+</script>
+</body>
+</html>
