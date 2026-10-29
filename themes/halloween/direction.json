@@ -7,8 +7,9 @@
       "when_setting": ["ledge"],
       "pick": {
         "costume": [
-          "a vampire costume: a black cape with a tall stiff red-lined collar, and a tiny pair of white plastic vampire fangs clipped over the tip of its beak",
-          "a gargoyle costume: a stone-gray hood with two small stubby horns and little bat wings"
+          "a vampire costume: a black cape with a tall stiff red-lined collar",
+          "a gargoyle costume: a stone-gray hood with two small stubby horns and little bat wings",
+          "a needle-felted bald eagle costume: a fuzzy white felted-wool hood framing its face, a hooked yellow felt eagle beak on the hood's brow above the pigeon's own, and a chocolate-brown felted body wrap with layered felt feathers"
         ]
       },
       "sample": {
