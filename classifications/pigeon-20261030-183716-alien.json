@@ -1,0 +1,26 @@
+{
+  "subject": "pigeon",
+  "raw": {
+    "subject": {
+      "type": "choice",
+      "choice": "pigeon",
+      "confidence": 1.0,
+      "probabilities": {
+        "pigeon": 1.0,
+        "other_bird": 0.0,
+        "no_bird": 0.0
+      }
+    }
+  },
+  "directions": {
+    "halloween": {
+      "choice": "alien",
+      "costume": "a homemade alien costume: a crinkly silver aluminum-foil body wrap held together with visible strips of tape, and a thin lime-green felt headband across the crown of its head, with two bobbing pipe-cleaner antennae rising straight up from the top of its head, tipped with glittery green pom-poms",
+      "props": [
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"
+      ],
+      "caption": "Close Encounters of the Bird Kind",
+      "phrase": "caption"
+    }
+  }
+}
