@@ -1,0 +1,26 @@
+{
+  "subject": "pigeon",
+  "raw": {
+    "subject": {
+      "type": "choice",
+      "choice": "pigeon",
+      "confidence": 1.0,
+      "probabilities": {
+        "pigeon": 1.0,
+        "other_bird": 0.0,
+        "no_bird": 0.0
+      }
+    }
+  },
+  "directions": {
+    "halloween": {
+      "choice": "bee",
+      "costume": "a bumblebee costume: a hand-knitted yellow-and-black striped bodysuit with visible chunky stitches, a thin knitted headband across the crown of its head, with two springy antennae rising straight up from the top of its head, tipped with yellow pom-poms, and small translucent mesh wings on its back",
+      "props": [
+        "a small felt sunflower pinned at the neck"
+      ],
+      "caption": "To Bee or Not to Bee",
+      "phrase": "caption"
+    }
+  }
+}
