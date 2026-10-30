@@ -20,18 +20,12 @@
     },
     "gargoyle": {
       "costume": "a gargoyle costume: a stone-gray hood with two small stubby horns and little bat wings",
-      "props": [
-        "a miniature gold medallion on a ribbon",
-        "a tiny orange jack-o'-lantern candy pail hooked over one wing"
-      ],
+      "props": ["a tiny orange jack-o'-lantern candy pail hooked over one wing"],
       "captions": ["Stone Cold Coo", "Feather Frightening"]
     },
     "eagle": {
       "costume": "a needle-felted bald eagle costume: a fuzzy white felted-wool hood framing its face, a hooked yellow felt eagle beak on the hood's brow above the pigeon's own, and a chocolate-brown felted body wrap with layered felt feathers",
-      "props": [
-        "a miniature gold medallion on a ribbon",
-        "a tiny orange jack-o'-lantern candy pail hooked over one wing"
-      ],
+      "props": ["a tiny orange jack-o'-lantern candy pail hooked over one wing"],
       "captions": ["Bird of Prey-tend", "Bald Ambition"]
     },
     "ghost": {
