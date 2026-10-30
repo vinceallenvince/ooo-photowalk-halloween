@@ -1,0 +1,26 @@
+{
+  "subject": "pigeon",
+  "raw": {
+    "subject": {
+      "type": "choice",
+      "choice": "pigeon",
+      "confidence": 1.0,
+      "probabilities": {
+        "pigeon": 1.0,
+        "other_bird": 0.0,
+        "no_bird": 0.0
+      }
+    }
+  },
+  "directions": {
+    "halloween": {
+      "choice": "bee",
+      "costume": "a bumblebee costume: a hand-knitted yellow-and-black striped bodysuit with visible chunky stitches, a headband with two springy antennae tipped with yellow pom-poms, and small translucent mesh wings on its back",
+      "props": [
+        "a tiny orange jack-o'-lantern candy pail hooked over one wing"
+      ],
+      "caption": "To Bee or Not to Bee",
+      "phrase": "caption"
+    }
+  }
+}
