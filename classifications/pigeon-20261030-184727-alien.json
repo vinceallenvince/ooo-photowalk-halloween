@@ -1,0 +1,26 @@
+{
+  "subject": "pigeon",
+  "raw": {
+    "subject": {
+      "type": "choice",
+      "choice": "pigeon",
+      "confidence": 1.0,
+      "probabilities": {
+        "pigeon": 1.0,
+        "other_bird": 0.0,
+        "no_bird": 0.0
+      }
+    }
+  },
+  "directions": {
+    "halloween": {
+      "choice": "alien",
+      "costume": "an alien costume: a glossy lime-green stretch bodysuit with a stiff, high silver space-age collar, and a lime-green alien hood framing its face, with two oversized glossy black almond-shaped alien eyes on the hood's brow above the pigeon's own, and two bobbing antennae rising straight up from the top of its head, tipped with glowing green orbs",
+      "props": [
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"
+      ],
+      "caption": "Close Encounters of the Bird Kind",
+      "phrase": "caption"
+    }
+  }
+}
