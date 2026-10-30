@@ -1,7 +1,8 @@
 """Publish or unpublish a render for vinceallen.com.
 
 COMMAND is "publish <path>" or "unpublish <path>", where <path> is a render
-under transformed/halloween/ (e.g. transformed/halloween/pigeon-20261025-090554.png).
+under transformed/halloween/ (e.g. transformed/halloween/pigeon-20261025-090554.png, or
+...-090554-bee.png when a costume was chosen).
 It comes from an issue title (the gallery's Publish link) or workflow_dispatch.
 
 Publishing copies the render to published/<theme>/<name> and records it in
@@ -20,7 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "published.json"
 COMMAND = re.compile(
     r"^(publish|unpublish)\s+"
-    r"(transformed/(halloween)/(pigeon-(\d{8})-(\d{6})(?:--(\w+))?\.png))\s*$"
+    r"(transformed/(halloween)/(pigeon-(\d{8})-(\d{6})(?:-[a-z]+)?(?:--(\w+))?\.png))\s*$"
 )
 
 
