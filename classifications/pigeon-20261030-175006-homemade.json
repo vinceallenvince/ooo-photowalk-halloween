@@ -1,0 +1,24 @@
+{
+  "subject": "pigeon",
+  "raw": {
+    "subject": {
+      "type": "choice",
+      "choice": "pigeon",
+      "confidence": 1.0,
+      "probabilities": {
+        "pigeon": 1.0,
+        "other_bird": 0.0,
+        "no_bird": 0.0
+      }
+    }
+  },
+  "directions": {
+    "halloween": {
+      "choice": "homemade",
+      "costume": "a simple homemade Halloween costume of your own invention, pieced together from everyday household materials",
+      "props": "one small homemade prop of your own choosing that suits the costume",
+      "caption": "Trick or Tweet",
+      "phrase": "caption"
+    }
+  }
+}
