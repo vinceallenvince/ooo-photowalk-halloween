@@ -14,24 +14,24 @@
       "costume": "a vampire costume: a black cape with a tall stiff red-lined collar",
       "props": [
         "a miniature gold medallion on a ribbon",
-        "a tiny orange jack-o'-lantern candy pail hooked over one wing"
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"
       ],
       "captions": ["Count Coo-cula", "Fangs for Visiting"]
     },
     "gargoyle": {
       "costume": "a gargoyle costume: a stone-gray hood with two small stubby horns and little bat wings",
-      "props": ["a tiny orange jack-o'-lantern candy pail hooked over one wing"],
+      "props": ["a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"],
       "captions": ["Stone Cold Coo", "Feather Frightening"]
     },
     "eagle": {
       "costume": "a needle-felted bald eagle costume: a fuzzy white felted-wool hood framing its face, a hooked yellow felt eagle beak on the hood's brow above the pigeon's own, and a chocolate-brown felted body wrap with layered felt feathers",
-      "props": ["a tiny orange jack-o'-lantern candy pail hooked over one wing"],
+      "props": ["a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"],
       "captions": ["Bird of Prey-tend", "Bald Ambition"]
     },
     "ghost": {
       "costume": "a small white bedsheet ghost costume with two cut-out eye holes, draped over its back with the head poking through",
       "props": [
-        "a tiny orange jack-o'-lantern candy pail hooked over one wing",
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace",
         "a miniature black top hat"
       ],
       "captions": ["Beak-a-Boo", "Feather Frightening"]
@@ -40,14 +40,14 @@
       "costume": "a Phantom of the Opera costume: a white porcelain half mask and a black opera cape with a red satin lining",
       "props": [
         "a miniature black top hat",
-        "a tiny orange jack-o'-lantern candy pail hooked over one wing"
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"
       ],
       "captions": ["The Phantom of the Coo-pera", "Coo-dini"]
     },
     "witch": {
       "costume": "a witch costume: a tall pointed black witch hat and a tattered black cape",
       "props": [
-        "a tiny orange jack-o'-lantern candy pail hooked over one wing",
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace",
         "a miniature eye patch",
         "a small purple satin bow at the neck",
         "a small black-and-orange striped scarf"
@@ -58,7 +58,7 @@
       "costume": "a pirate costume: a black tricorn hat with gold trim and a small striped sash",
       "props": [
         "a miniature eye patch",
-        "a tiny orange jack-o'-lantern candy pail hooked over one wing"
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"
       ],
       "captions": ["Coo-ptain Hook", "Yo Ho Coo"]
     },
@@ -66,14 +66,14 @@
       "costume": "a scarecrow costume: a frayed straw hat and a patched burlap vest with straw poking out of the seams",
       "props": [
         "a red plaid bandana knotted at the neck",
-        "a tiny orange jack-o'-lantern candy pail hooked over one wing"
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"
       ],
       "captions": ["Scare-pigeon", "If I Only Had a Brain"]
     },
     "pumpkin": {
       "costume": "a round orange pumpkin costume with a green stem cap",
       "props": [
-        "a tiny orange jack-o'-lantern candy pail hooked over one wing",
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace",
         "a little collar of green felt pumpkin leaves"
       ],
       "captions": ["Oh My Gourd", "Trick or Tweet"]
@@ -82,14 +82,14 @@
       "costume": "a plague doctor costume: a small black wide-brimmed hat, a long black waxed-canvas cloak, and a white leather beaked plague mask that covers its whole face, the mask's long curved beak in place of the pigeon's own, with round glass eyepieces",
       "props": [
         "a tiny wooden walking cane tucked under one wing",
-        "a tiny orange jack-o'-lantern candy pail hooked over one wing"
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"
       ],
       "captions": ["The Doctor Will Coo You Now", "Beak Practice"]
     },
     "bee": {
       "costume": "a bumblebee costume: a hand-knitted yellow-and-black striped bodysuit with visible chunky stitches, a thin knitted headband across the crown of its head, with two springy antennae rising straight up from the top of its head, tipped with yellow pom-poms, and small translucent mesh wings on its back",
       "props": [
-        "a tiny orange jack-o'-lantern candy pail hooked over one wing",
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace",
         "a small felt sunflower pinned at the neck"
       ],
       "captions": ["To Bee or Not to Bee", "Bumble Pigeon"]
@@ -97,7 +97,7 @@
     "skeleton": {
       "costume": "a black skeleton onesie with white printed bones",
       "props": [
-        "a tiny orange jack-o'-lantern candy pail hooked over one wing",
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace",
         "a small black-and-orange striped scarf"
       ],
       "captions": ["Bare Bones", "The Coo-ning"]
