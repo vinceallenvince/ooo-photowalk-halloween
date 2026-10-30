@@ -1,0 +1,26 @@
+{
+  "subject": "pigeon",
+  "raw": {
+    "subject": {
+      "type": "choice",
+      "choice": "pigeon",
+      "confidence": 1.0,
+      "probabilities": {
+        "pigeon": 1.0,
+        "other_bird": 0.0,
+        "no_bird": 0.0
+      }
+    }
+  },
+  "directions": {
+    "halloween": {
+      "choice": "astronaut",
+      "costume": "a homemade astronaut costume: a puffy white quilted bodysuit with visible stitching and gray duct-tape trim, and a clear round plastic bubble helmet over its head, its face fully visible through it",
+      "props": [
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"
+      ],
+      "caption": "Coo-ston, We Have a Problem",
+      "phrase": "caption"
+    }
+  }
+}
