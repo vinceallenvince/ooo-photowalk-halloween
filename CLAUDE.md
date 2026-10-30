@@ -10,11 +10,11 @@ Guidance for coding agents working in this repo. This is the **Halloween** mode 
 
 ## Architecture in one breath
 
-iOS Shortcut ("Post Pigeon") → GitHub Contents API → `pigeons/pigeon-yyyyMMdd-HHmmss.jpg` → push triggers `.github/workflows/transform.yml` → `scripts/transform.py`:
+iOS Shortcut ("Post Pigeon", with a costume menu) → GitHub Contents API → `pigeons/pigeon-yyyyMMdd-HHmmss-<costume>.jpg` → push triggers `.github/workflows/transform.yml` → `scripts/transform.py`:
 
-1. Classify with Typesafe/Jev: subject, setting, activity.
+1. Classify with Typesafe/Jev: subject only.
 2. Gate: if it's not a pigeon, send a Bark push and stop.
-3. Pick the costume, props, and caption from `themes/halloween/direction.json` (costume by setting, caption by activity). There's no theme selection: `THEME = "halloween"` in `scripts/transform.py`.
+3. Look up the user's costume (from the filename) in `themes/halloween/direction.json`, then pick one of its props and captions. No or unknown costume → `default` (`homemade`, which lets the model invent one). There's no theme selection: `THEME = "halloween"` in `scripts/transform.py`.
 4. Run the OpenAI image edit with `themes/halloween/prompt.md`, filled in. The theme is validated first.
 5. Write `transformed/halloween/<stem>.png`.
 

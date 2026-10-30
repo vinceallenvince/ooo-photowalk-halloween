@@ -2,10 +2,12 @@
 
 This repo is the Halloween mode: every photo gets THEME ("halloween").
 
-Stage 1 (Typesafe / Jev): one request, three Choice questions about
-    pigeons/<name>.jpg — subject, setting, activity.
-Stage 2 (script): pick the theme's direction (style from the setting, phrase
-    from the activity) using themes/<theme>/direction.json. Saved with the
+Stage 1 (Typesafe / Jev): one Choice question about pigeons/<name>.jpg —
+    is the subject a pigeon?
+Stage 2 (script): look up the costume the user chose in the Shortcut, carried
+    in the filename (pigeon-yyyyMMdd-HHmmss-<costume>.jpg), in
+    themes/<theme>/direction.json; no or unknown costume means the default.
+    Props and caption are picked from that costume. Saved with the
     classification in classifications/<name>.json under directions.<theme>.
 Stage 3 (renderers): only if the subject is a pigeon, fill
     themes/<theme>/prompt.md and edit the photo with each renderer in
@@ -62,25 +64,6 @@ QUESTIONS = {
             "no_bird": "There is no bird in the photo.",
         },
     },
-    "setting": {
-        "instructions": "Where is the bird in `photo`?",
-        "criteria": {
-            "indoors": "Inside a building, store, mall, or other enclosed, heated space.",
-            "subway": "A subway platform, train car, or underground station.",
-            "street": "A city street, sidewalk, plaza, or parking lot.",
-            "park": "A park, garden, lawn, or other green space.",
-            "ledge": "A rooftop, ledge, windowsill, railing, sign, or wire.",
-        },
-    },
-    "activity": {
-        "instructions": "What is the bird in `photo` doing?",
-        "criteria": {
-            "eating": "Eating, pecking at food, or foraging.",
-            "walking": "Walking or strutting.",
-            "perched": "Standing still, resting, or perched.",
-            "flying": "Taking off, landing, or in flight.",
-        },
-    },
 }
 
 # ---------------------------------------------------------------------------
@@ -108,18 +91,17 @@ def load_theme(name: str) -> dict:
     if used != declared:
         raise SystemExit(f"Theme {name}: prompt uses {sorted(used)}, "
                          f"direction.json declares {sorted(declared)}")
-    styles = theme["styles"]
-    defaults = [k for k, st in styles.items() if st.get("default")]
-    if len(defaults) != 1:
-        raise SystemExit(f"Theme {name}: need exactly one default style, got {defaults}")
-    if not any(theme["phrases"].values()):
-        raise SystemExit(f"Theme {name}: no phrases")
-    for key, st in styles.items():
-        fills = set(st.get("pick", {})) | set(st.get("sample", {})) | {theme["phrase"]}
-        for outfit in st.get("outfits") or [{}]:
-            missing = {ph for ph in declared if ph.lower() not in fills | set(outfit)}
-            if missing:
-                raise SystemExit(f"Theme {name}, style {key}: can't fill {sorted(missing)}")
+    costumes = theme["costumes"]
+    if theme["default"] not in costumes:
+        raise SystemExit(f"Theme {name}: default {theme['default']!r} is not a costume")
+    for key, c in costumes.items():
+        if not re.fullmatch(r"[a-z]+", key):
+            raise SystemExit(f"Theme {name}: costume key {key!r} must be lowercase letters")
+        missing = {ph for ph in declared if not c.get(ph.lower())}
+        if missing:
+            raise SystemExit(f"Theme {name}, costume {key}: can't fill {sorted(missing)}")
+        if not c.get("captions"):
+            raise SystemExit(f"Theme {name}, costume {key}: no captions")
     _themes[name] = theme
     return theme
 
@@ -199,30 +181,28 @@ def classify(path: pathlib.Path) -> dict:
     return result
 
 
-def pick_direction(theme: dict, stem: str, setting, activity) -> dict:
-    """Choose the theme's style, picks, and phrase. Seeded by theme + filename
-    so re-runs match."""
+def costume_choice(stem: str):
+    """The costume key the Shortcut put in the filename, if any."""
+    m = re.fullmatch(r"pigeon-\d{8}-\d{6}-([a-z]+)", stem.lower())
+    return m.group(1) if m else None
+
+
+def pick_direction(theme: dict, stem: str) -> dict:
+    """Look up the chosen costume, then pick its props and caption. Seeded by
+    theme + filename so re-runs match."""
     rng = random.Random(f"{theme['name']}/{stem}")
-    styles = theme["styles"]
-    style = next(
-        (k for k, st in styles.items() if setting in st.get("when_setting", [])),
-        next(k for k, st in styles.items() if st.get("default")),
-    )
-    d = {"style": style}
-    # An outfit bundles fields: a string is used as is, a list is sampled
-    # (`counts` sets how many, default 1).
-    if styles[style].get("outfits"):
-        outfit = rng.choice(styles[style]["outfits"])
-        counts = styles[style].get("counts", {})
-        for key, value in sorted(outfit.items()):
-            d[key] = value if isinstance(value, str) else rng.sample(value, counts.get(key, 1))
-    for key, options in sorted(styles[style].get("pick", {}).items()):
-        d[key] = rng.choice(options)
-    for key, spec in sorted(styles[style].get("sample", {}).items()):
-        d[key] = rng.sample(spec["from"], spec["count"])
-    phrases = theme["phrases"]
-    pool = phrases.get(activity) or [s for p in phrases.values() for s in p]
-    d[theme["phrase"]] = rng.choice(pool)
+    choice = costume_choice(stem)
+    if choice not in theme["costumes"]:
+        if choice:
+            print(f"   unknown costume {choice!r}, using {theme['default']!r}")
+        choice = theme["default"]
+    c = theme["costumes"][choice]
+    d = {"choice": choice}
+    # A string is used as is; a list has one option picked.
+    for ph in theme["placeholders"]:
+        value = c[ph.lower()]
+        d[ph.lower()] = value if isinstance(value, str) else [rng.choice(value)]
+    d[theme["phrase"]] = rng.choice(c["captions"])
     d["phrase"] = theme["phrase"]
     return d
 
@@ -339,8 +319,7 @@ for src, theme_name in todo:
             result = {"subject": None}
 
         subject = result.get("subject")
-        print(f"   subject: {subject}, setting: {result.get('setting')}, "
-              f"activity: {result.get('activity')}")
+        print(f"   subject: {subject}")
 
         if subject is not None and subject != "pigeon":
             cls_file.write_text(json.dumps(result, indent=2))
@@ -351,9 +330,7 @@ for src, theme_name in todo:
             print("   no classification, transforming with defaults")
 
         # Stage 2: creative direction
-        direction = pick_direction(
-            theme, src.stem, result.get("setting"), result.get("activity")
-        )
+        direction = pick_direction(theme, src.stem)
         result.setdefault("directions", {})[theme_name] = direction
         cls_file.write_text(json.dumps(result, indent=2))
         print(f"   direction: {json.dumps(direction)}")
