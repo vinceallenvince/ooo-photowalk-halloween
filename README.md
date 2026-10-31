@@ -115,7 +115,7 @@ Add these actions in order, using the search bar at the bottom. Text in **bold**
 | 3 | Resize Image | Resize **Converted Image** to width **1200**, height auto | [📷](docs/shortcut/steps-01-04.png) |
 | 4 | Base64 Encode | **Encode** **Resized Image** · Line Breaks: **None** | [📷](docs/shortcut/steps-04-06.png) |
 | 5 | Format Date | **Current Date** · Date Format: **Custom** · `yyyyMMdd-HHmmss` | [📷](docs/shortcut/steps-04-06.png) |
-| 6 | Choose from Menu | Prompt `Costume` · items, lowercase, one word each: `homemade` `vampire` `gargoyle` `eagle` `ghost` `phantom` `witch` `pirate` `scarecrow` `pumpkin` `plague` `bee` `skeleton` `alien` `astronaut` `dinosaur` · leave each branch empty | [📷](docs/shortcut/steps-04-06.png) |
+| 6 | Choose from Menu | Prompt `Costume` · items, lowercase, one word each: `homemade` `vampire` `gargoyle` `eagle` `ghost` `phantom` `witch` `pirate` `scarecrow` `pumpkin` `plague` `bee` `skeleton` `alien` `astronaut` `dinosaur` `princess` · leave each branch empty | [📷](docs/shortcut/steps-04-06.png) |
 | 7 | Text | `pigeons/pigeon-`**Formatted Date**`-`**Menu Result**`.jpg` | [📷](docs/shortcut/steps-07-08.png) |
 | 8 | Get Contents of URL | see below | [📷](docs/shortcut/steps-07-08.png) |
 | 9 | Get Dictionary Value | Get **Value** for `content` in **Contents of URL** | [📷](docs/shortcut/steps-08-11.png) |

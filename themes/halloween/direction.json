@@ -125,6 +125,14 @@
         "a small felt bone hanging from a cord around its neck"
       ],
       "captions": ["Coo-rassic Park", "Return to Form"]
+    },
+    "princess": {
+      "costume": "a princess costume: a pink satin bodice with puffed satin cap sleeves at the shoulders of its wings, a short flared pink tulle skirt that stops above its legs so its feet stay visible, and a small sparkly silver rhinestone tiara on the crown of its head",
+      "props": [
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace",
+        "a tiny string of pearls around its neck"
+      ],
+      "captions": ["Top of the Pecking Order", "Coo-nderella"]
     }
   }
 }
