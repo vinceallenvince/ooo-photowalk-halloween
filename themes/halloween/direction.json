@@ -117,6 +117,14 @@
         "a small foil-covered cardboard oxygen pack strapped to its back"
       ],
       "captions": ["One Small Step for Pigeon", "Coo-ston, We Have a Problem"]
+    },
+    "dinosaur": {
+      "costume": "a T. rex costume: a green plush dinosaur hood framing its face, with a T. rex snout and a row of soft white felt teeth on the hood's brow above the pigeon's own beak, a row of stiff orange felt spikes running down its back, and a stubby padded green tail sleeve over its tail feathers",
+      "props": [
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace",
+        "a small felt bone hanging from a cord around its neck"
+      ],
+      "captions": ["Coo-rassic Park", "Return to Form"]
     }
   }
 }
