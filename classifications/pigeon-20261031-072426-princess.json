@@ -1,0 +1,26 @@
+{
+  "subject": "pigeon",
+  "raw": {
+    "subject": {
+      "type": "choice",
+      "choice": "pigeon",
+      "confidence": 0.98,
+      "probabilities": {
+        "pigeon": 0.99,
+        "other_bird": 0.01,
+        "no_bird": 0.0
+      }
+    }
+  },
+  "directions": {
+    "halloween": {
+      "choice": "princess",
+      "costume": "a princess costume: a pink satin bodice with puffed satin cap sleeves at the shoulders of its wings, a short flared pink tulle skirt that stops above its legs so its feet stay visible, and a small sparkly silver rhinestone tiara on the crown of its head",
+      "props": [
+        "a tiny string of pearls around its neck"
+      ],
+      "caption": "Coo-nderella",
+      "phrase": "caption"
+    }
+  }
+}
