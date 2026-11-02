@@ -1,0 +1,26 @@
+{
+  "subject": "pigeon",
+  "raw": {
+    "subject": {
+      "type": "choice",
+      "choice": "pigeon",
+      "confidence": 0.98,
+      "probabilities": {
+        "pigeon": 0.99,
+        "other_bird": 0.01,
+        "no_bird": 0.0
+      }
+    }
+  },
+  "directions": {
+    "halloween": {
+      "choice": "hotdog",
+      "costume": "a full-body hot dog costume that encases its whole body from the base of its neck to the tip of its tail, with only its head, legs, and tail tip poking out: a plush golden-tan bun hugging both sides of its body along its full length, a plump red felt sausage nestled along the entire length of its back, and a wavy squiggle of yellow felt mustard running down the sausage",
+      "props": [
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"
+      ],
+      "caption": "Frank-enstein",
+      "phrase": "caption"
+    }
+  }
+}
