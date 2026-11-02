@@ -1,0 +1,26 @@
+{
+  "subject": "pigeon",
+  "raw": {
+    "subject": {
+      "type": "choice",
+      "choice": "pigeon",
+      "confidence": 1.0,
+      "probabilities": {
+        "pigeon": 1.0,
+        "other_bird": 0.0,
+        "no_bird": 0.0
+      }
+    }
+  },
+  "directions": {
+    "halloween": {
+      "choice": "robot",
+      "costume": "a homemade robot costume: a small brown cardboard box worn over its body, with rough hand-cut holes for its wings, legs, and neck, partly covered in crinkled aluminum foil held on with visible strips of tape, with bottle-cap dials and a few colorful buttons glued to the front, and a thin foil-covered cardboard headband across the crown of its head, with a bendy-straw antenna rising straight up from the top of its head, tipped with a bottle cap",
+      "props": [
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"
+      ],
+      "caption": "Beep Boop Coo",
+      "phrase": "caption"
+    }
+  }
+}
