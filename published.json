@@ -1,5 +1,12 @@
 [
   {
+    "file": "published/halloween/pigeon-20261102-092641-eagle.png",
+    "created": "2026-11-02T09:26:41",
+    "theme": "halloween",
+    "renderer": "openai",
+    "phrase": "Bird of Prey-tend"
+  },
+  {
     "file": "published/halloween/pigeon-20261102-062222-robot.png",
     "created": "2026-11-02T06:22:22",
     "theme": "halloween",
