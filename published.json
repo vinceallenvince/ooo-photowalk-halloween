@@ -7,6 +7,13 @@
     "phrase": "Coo-rassic Park"
   },
   {
+    "file": "published/halloween/pigeon-20261030-185223-alien.png",
+    "created": "2026-10-30T18:52:23",
+    "theme": "halloween",
+    "renderer": "openai",
+    "phrase": "Close Encounters of the Bird Kind"
+  },
+  {
     "file": "published/halloween/pigeon-20261030-184546-astronaut.png",
     "created": "2026-10-30T18:45:46",
     "theme": "halloween",
