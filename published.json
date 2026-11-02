@@ -35,6 +35,13 @@
     "phrase": "One Small Step for Pigeon"
   },
   {
+    "file": "published/halloween/pigeon-20261030-175319-bee.png",
+    "created": "2026-10-30T17:53:19",
+    "theme": "halloween",
+    "renderer": "openai",
+    "phrase": "Bumble Pigeon"
+  },
+  {
     "file": "published/halloween/pigeon-20261026-100601.png",
     "created": "2026-10-26T10:06:01",
     "theme": "halloween",
