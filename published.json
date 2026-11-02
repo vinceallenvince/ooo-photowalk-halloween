@@ -1,5 +1,12 @@
 [
   {
+    "file": "published/halloween/pigeon-20261031-071425-dinosaur.png",
+    "created": "2026-10-31T07:14:25",
+    "theme": "halloween",
+    "renderer": "openai",
+    "phrase": "Coo-rassic Park"
+  },
+  {
     "file": "published/halloween/pigeon-20261026-100601.png",
     "created": "2026-10-26T10:06:01",
     "theme": "halloween",
