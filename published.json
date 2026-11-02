@@ -1,5 +1,12 @@
 [
   {
+    "file": "published/halloween/pigeon-20261102-062222-robot.png",
+    "created": "2026-11-02T06:22:22",
+    "theme": "halloween",
+    "renderer": "openai",
+    "phrase": "Does Not Coo-mpute"
+  },
+  {
     "file": "published/halloween/pigeon-20261031-072035-princess.png",
     "created": "2026-10-31T07:20:35",
     "theme": "halloween",
