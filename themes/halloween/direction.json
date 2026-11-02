@@ -141,6 +141,14 @@
         "a short coil of foil-wrapped flexible tubing looped around its neck like a collar"
       ],
       "captions": ["Does Not Coo-mpute", "Beep Boop Coo"]
+    },
+    "hotdog": {
+      "costume": "a hot dog costume: a plush golden-tan bun wrapped around both sides of its body like a saddle, with a plump red felt sausage lying along its back and a wavy squiggle of yellow felt mustard running down the sausage",
+      "props": [
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace",
+        "a small red-and-white checkered bandana knotted at the neck"
+      ],
+      "captions": ["Frank-enstein", "Relish the Moment"]
     }
   }
 }
