@@ -1,0 +1,28 @@
+{
+  "subject": "pigeon",
+  "raw": {
+    "subject": {
+      "type": "choice",
+      "choice": "pigeon",
+      "confidence": 0.98,
+      "probabilities": {
+        "pigeon": 0.99,
+        "other_bird": 0.01,
+        "no_bird": 0.0
+      }
+    }
+  },
+  "directions": {
+    "halloween": {
+      "choice": "unicorn",
+      "costume": [
+        "a unicorn costume: a soft white fleece body wrap, a mane of pastel rainbow yarn running down the back of its neck, a matching rainbow yarn tuft over its tail feathers, and a wide, clearly visible white satin headband strapped across the crown of its head, with a pearly white spiral horn with an iridescent shimmer attached to the top of the headband"
+      ],
+      "props": [
+        "a small pastel rainbow ribbon bow at the neck"
+      ],
+      "caption": "Uni-coo-rn",
+      "phrase": "caption"
+    }
+  }
+}
