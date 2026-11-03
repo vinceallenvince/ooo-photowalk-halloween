@@ -1,0 +1,26 @@
+{
+  "subject": "pigeon",
+  "raw": {
+    "subject": {
+      "type": "choice",
+      "choice": "pigeon",
+      "confidence": 1.0,
+      "probabilities": {
+        "pigeon": 1.0,
+        "other_bird": 0.0,
+        "no_bird": 0.0
+      }
+    }
+  },
+  "directions": {
+    "halloween": {
+      "choice": "mermaid",
+      "costume": "a mermaid costume: a shimmering teal-and-green sequined fish-scale wrap covering its body from mid-back to its tail, ending in a wide, flared, ruffled fishtail fin over its tail feathers, with its legs and feet left free, a collar of small pearly seashells around the base of its neck, and a wide, clearly visible seafoam-green headband across the crown of its head, with a small coral-pink felt starfish attached to the side of the headband",
+      "props": [
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"
+      ],
+      "caption": "Something Smells Fishy",
+      "phrase": "caption"
+    }
+  }
+}
