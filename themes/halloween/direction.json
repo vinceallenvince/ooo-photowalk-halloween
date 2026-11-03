@@ -149,6 +149,20 @@
         "a small red-and-white checkered bandana knotted at the neck"
       ],
       "captions": ["Frank-enstein", "Relish the Moment"]
+    },
+    "unicorn": {
+      "costume": [
+        "a unicorn costume: a soft white fleece body wrap, a mane of pastel rainbow yarn running down the back of its neck, a matching rainbow yarn tuft over its tail feathers, and a wide, clearly visible white satin headband strapped across the crown of its head, with a spiral horn striped in bright rainbow bands attached to the top of the headband",
+        "a unicorn costume: a soft white fleece body wrap, a mane of pastel rainbow yarn running down the back of its neck, a matching rainbow yarn tuft over its tail feathers, and a wide, clearly visible white satin headband strapped across the crown of its head, with a pearly white spiral horn with an iridescent shimmer attached to the top of the headband",
+        "a unicorn costume: a soft white fleece body wrap, a mane of pastel rainbow yarn running down the back of its neck, a matching rainbow yarn tuft over its tail feathers, and a wide, clearly visible white satin headband strapped across the crown of its head, with a gold spiral horn coated in fine gold glitter attached to the top of the headband",
+        "a unicorn costume: a soft white fleece body wrap, a mane of pastel rainbow yarn running down the back of its neck, a matching rainbow yarn tuft over its tail feathers, and a wide, clearly visible white satin headband strapped across the crown of its head, with a pastel pink-and-lavender swirled spiral horn attached to the top of the headband",
+        "a unicorn costume: a soft white fleece body wrap, a mane of pastel rainbow yarn running down the back of its neck, a matching rainbow yarn tuft over its tail feathers, and a wide, clearly visible white satin headband strapped across the crown of its head, with a silver spiral horn covered in tiny rhinestone sparkles attached to the top of the headband"
+      ],
+      "props": [
+        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace",
+        "a small pastel rainbow ribbon bow at the neck"
+      ],
+      "captions": ["Uni-coo-rn", "Magic Pigeon, Probably"]
     }
   }
 }
