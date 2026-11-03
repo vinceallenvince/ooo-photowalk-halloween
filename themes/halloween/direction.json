@@ -165,6 +165,11 @@
       "costume": "a full-body gray plush shark costume with a white belly: the hood is a shark's head with its jaws wide open around the pigeon's face, ringed with soft white felt teeth, so the pigeon peers out from inside the shark's mouth, a stiff gray dorsal fin standing up along the middle of its back, and a forked gray shark tail fin over its tail feathers",
       "props": ["a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"],
       "captions": ["Feeding Frenzy", "Bread in the Water"]
+    },
+    "mermaid": {
+      "costume": "a mermaid costume: a shimmering teal-and-green sequined fish-scale wrap covering its body from mid-back to its tail, ending in a wide, flared, ruffled fishtail fin over its tail feathers, with its legs and feet left free, a collar of small pearly seashells around the base of its neck, and a wide, clearly visible seafoam-green headband across the crown of its head, with a small coral-pink felt starfish attached to the side of the headband",
+      "props": ["a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"],
+      "captions": ["Fish Out of Water", "Something Smells Fishy"]
     }
   }
 }
