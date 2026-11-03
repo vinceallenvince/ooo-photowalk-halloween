@@ -195,6 +195,8 @@ def pick_direction(theme: dict, stem: str) -> dict:
     if choice not in theme["costumes"]:
         if choice:
             print(f"   unknown costume {choice!r}, using {theme['default']!r}")
+        elif stem.endswith("-"):
+            print(f"   costume missing from filename (empty Menu Result?), using {theme['default']!r}")
         choice = theme["default"]
     c = theme["costumes"][choice]
     d = {"choice": choice}
