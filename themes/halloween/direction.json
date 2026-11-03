@@ -158,11 +158,13 @@
         "a unicorn costume: a soft white fleece body wrap, a mane of pastel rainbow yarn running down the back of its neck, a matching rainbow yarn tuft over its tail feathers, and a wide, clearly visible white satin headband strapped across the crown of its head, with a pastel pink-and-lavender swirled spiral horn attached to the top of the headband",
         "a unicorn costume: a soft white fleece body wrap, a mane of pastel rainbow yarn running down the back of its neck, a matching rainbow yarn tuft over its tail feathers, and a wide, clearly visible white satin headband strapped across the crown of its head, with a silver spiral horn covered in tiny rhinestone sparkles attached to the top of the headband"
       ],
-      "props": [
-        "a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace",
-        "a small pastel rainbow ribbon bow at the neck"
-      ],
+      "props": ["a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"],
       "captions": ["Uni-coo-rn", "Magic Pigeon, Probably"]
+    },
+    "shark": {
+      "costume": "a full-body gray plush shark costume with a white belly: the hood is a shark's head with its jaws wide open around the pigeon's face, ringed with soft white felt teeth, so the pigeon peers out from inside the shark's mouth, a stiff gray dorsal fin standing up along the middle of its back, and a forked gray shark tail fin over its tail feathers",
+      "props": ["a tiny orange jack-o'-lantern candy pail hanging from a cord around its neck, like a necklace"],
+      "captions": ["Feeding Frenzy", "Bread in the Water"]
     }
   }
 }
