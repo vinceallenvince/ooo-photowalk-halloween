@@ -115,7 +115,7 @@ Add these actions in order, using the search bar at the bottom. Text in **bold**
 | 3 | Resize Image | Resize **Converted Image** to width **1200**, height auto | [📷](docs/shortcut/steps-01-04.png) |
 | 4 | Base64 Encode | **Encode** **Resized Image** · Line Breaks: **None** | [📷](docs/shortcut/steps-04-06.png) |
 | 5 | Format Date | **Current Date** · Date Format: **Custom** · `yyyyMMdd-HHmmss` | [📷](docs/shortcut/steps-04-06.png) |
-| 6 | Choose from Menu | Prompt `Costume` · items, lowercase, one word each: `homemade` `vampire` `gargoyle` `eagle` `ghost` `phantom` `witch` `pirate` `scarecrow` `pumpkin` `plague` `bee` `skeleton` `alien` `astronaut` `dinosaur` `princess` `robot` `hotdog` · leave each branch empty | [📷](docs/shortcut/steps-04-06.png) |
+| 6 | Choose from Menu | Prompt `Costume` · items, lowercase, one word each: `homemade` `vampire` `gargoyle` `eagle` `ghost` `phantom` `witch` `pirate` `scarecrow` `pumpkin` `plague` `bee` `skeleton` `alien` `astronaut` `dinosaur` `princess` `robot` `hotdog` `unicorn` · leave each branch empty | [📷](docs/shortcut/steps-04-06.png) |
 | 7 | Text | `pigeons/pigeon-`**Formatted Date**`-`**Menu Result**`.jpg` | [📷](docs/shortcut/steps-07-08.png) |
 | 8 | Get Contents of URL | see below | [📷](docs/shortcut/steps-07-08.png) |
 | 9 | Get Dictionary Value | Get **Value** for `content` in **Contents of URL** | [📷](docs/shortcut/steps-08-11.png) |
@@ -152,7 +152,7 @@ In Photos, tap **Share → Post Pigeon**. The raw image URL lands on your clipbo
 
 ## Tweaks
 
-- **Costumes, props, and captions:** edit `themes/halloween/direction.json`. A new costume also needs a matching item in the Shortcut menu.
+- **Costumes, props, and captions:** edit `themes/halloween/direction.json`. A new costume also needs a matching item in the Shortcut menu. A costume can be a list of variants (like `unicorn`'s horns); each photo gets one.
 - **Regenerate a pigeon:** delete its PNG in `transformed/halloween/` and run the workflow (Actions → Run workflow).
 - **Force a rejected photo through:** delete its JSON in `classifications/` and run the workflow.
 - **Compare renderers:** `RENDERERS` picks who renders, from `openai` and `flux` (a FLUX.2 model on Replicate, `flux-2-max` by default; set the repo variable `FLUX_MODEL` to try another, e.g. `black-forest-labs/flux-2-flex`). Both get the same prompt; FLUX writes `<name>--flux.png` next to the OpenAI image, and each sends its own push. Default `openai`; set the repo variable `RENDERERS` to `openai,flux` or use the Run workflow box to add FLUX.
