@@ -1,5 +1,12 @@
 [
   {
+    "file": "published/halloween/pigeon-20261102-213107-shark.png",
+    "created": "2026-11-02T21:31:07",
+    "theme": "halloween",
+    "renderer": "openai",
+    "phrase": "Feeding Frenzy"
+  },
+  {
     "file": "published/halloween/pigeon-20261102-131753-hotdog.png",
     "created": "2026-11-02T13:17:53",
     "theme": "halloween",
